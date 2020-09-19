@@ -98,11 +98,7 @@ typedef struct descriptor_data descriptor_t;
  Types.
  ******************************************************************************/
 
-typedef enum
-{
-   false, 
-   true
-} bool_t;
+typedef bool bool_t;
 
 typedef enum
 {
