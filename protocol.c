@@ -2255,34 +2255,34 @@ static bool_t ConfirmNegotiation( descriptor_t *apDescriptor, negotiated_t aProt
             switch ( aProtocol )
             {
                case eNEGOTIATED_TTYPE:
-                  SendNegotiationSequence( apDescriptor, abWillDo ? DO : DONT, TELOPT_TTYPE );
+                  SendNegotiationSequence( apDescriptor, abWillDo ? (char)DO : (char)DONT, TELOPT_TTYPE );
                   break;
                case eNEGOTIATED_ECHO:
-                  SendNegotiationSequence( apDescriptor, abWillDo ? WILL : WONT, TELOPT_ECHO );
+                  SendNegotiationSequence( apDescriptor, abWillDo ? (char)WILL : (char)WONT, TELOPT_ECHO );
                   break;
                case eNEGOTIATED_NAWS:
-                  SendNegotiationSequence( apDescriptor, abWillDo ? DO : DONT, TELOPT_NAWS );
+                  SendNegotiationSequence( apDescriptor, abWillDo ? (char)DO : (char)DONT, TELOPT_NAWS );
                   break;
                case eNEGOTIATED_CHARSET:
-                  SendNegotiationSequence( apDescriptor, abWillDo ? DO : DONT, TELOPT_CHARSET );
+                  SendNegotiationSequence( apDescriptor, abWillDo ? (char)DO : (char)DONT, TELOPT_CHARSET );
                   break;
                case eNEGOTIATED_MSDP:
-                  SendNegotiationSequence( apDescriptor, abWillDo ? WILL : WONT, TELOPT_MSDP );
+                  SendNegotiationSequence( apDescriptor, abWillDo ? (char)WILL : (char)WONT, TELOPT_MSDP );
                   break;
                case eNEGOTIATED_MSSP:
-                  SendNegotiationSequence( apDescriptor, abWillDo ? WILL : WONT, TELOPT_MSSP );
+                  SendNegotiationSequence( apDescriptor, abWillDo ? (char)WILL : (char)WONT, TELOPT_MSSP );
                   break;
                case eNEGOTIATED_ATCP:
-                  SendNegotiationSequence( apDescriptor, abWillDo ? DO : DONT, (char)TELOPT_ATCP );
+                  SendNegotiationSequence( apDescriptor, abWillDo ? (char)DO : (char)DONT, (char)TELOPT_ATCP );
                   break;
                case eNEGOTIATED_MSP:
-                  SendNegotiationSequence( apDescriptor, abWillDo ? WILL : WONT, TELOPT_MSP );
+                  SendNegotiationSequence( apDescriptor, abWillDo ? (char)WILL : (char)WONT, TELOPT_MSP );
                   break;
                case eNEGOTIATED_MXP:
-                  SendNegotiationSequence( apDescriptor, abWillDo ? DO : DONT, TELOPT_MXP );
+                  SendNegotiationSequence( apDescriptor, abWillDo ? (char)DO : (char)DONT, TELOPT_MXP );
                   break;
                case eNEGOTIATED_MXP2:
-                  SendNegotiationSequence( apDescriptor, abWillDo ? WILL : WONT, TELOPT_MXP );
+                  SendNegotiationSequence( apDescriptor, abWillDo ? (char)WILL : (char)WONT, TELOPT_MXP );
                   break;
                case eNEGOTIATED_MCCP:
 #ifdef USING_MCCP
